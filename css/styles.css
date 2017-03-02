@@ -94,10 +94,83 @@ body {
   margin-top: 25px;
 }
 
+/*Home Page*/
+.container .jumbotron{
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
+}
 
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover{
+  box-shadow: 0 1px 5px 1px #CCC;
+}
+#menu-tile {
+  background-image: url('/images/menu-tile.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background-image: url('/images/specials-tile.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#home-tiles span{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+  color: #FFF;
+  background-color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6em;
+
+}
+/*Footer*/
+.panel-footer{
+  margin-top: 30px;
+  background-color: #222;
+  border-top: 0;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+/* END FOOTER */
 /****** Large devices only ******/
 @media (min-width: 1200px) {
-
+  .container .jumbotron {
+    background-image: url('../images/jumbotron_1200.jpg');
+    background-repeat: no-repeat;
+    height: 675px;
+  }
 }
 /****** Medium devices only ******/
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -107,6 +180,12 @@ body {
     height: 100px;
     width: 100px;
     margin: 5px 5px 5px 0;
+  }
+
+  .container .jumbotron {
+    background-image: url('../images/jumbotron_992.jpg');
+    background-repeat: no-repeat;
+    height: 558px;
   }
 }
 
@@ -121,13 +200,67 @@ body {
   .navbar-brand h1 {
     font-size: 1.2em;
   }
+
+  .container .jumbotron {
+    background-image: url('../images/jumbotron_768.jpg');
+    background-repeat: no-repeat;
+    height: 432px;
+  }
 }
 /****** Extra small devices only ******/
 @media (max-width: 767px) {
+  .navbar-brand h1 {
+    font-size: 5vw;
+  }
   #collapsable-nav a{
     font-size: 1.2em;
   }
   #collapsable-nav a span{
     font-size: 1em;
+  }
+
+  .container .jumbotron{
+    padding: 0;
+  }
+
+  #menu-tile, #specials-tile {
+    width: 360px;
+    margin: 0 auto 30px;
+  }
+  /* Contact panel*/
+  #contact-btn > a{
+    font-size: 1.5em;
+    background-color: #F6B319;
+    color: #951c49;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #FFF;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /*footer*/
+  .panel-footer{
+    text-align: center;
+  }
+
+  .panel-footer section:nth-child(1) {
+  margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr{
+    width: 50%;
+  }
+  /*end of footer*/
+}
+/****** Extra extra small devices only ******/
+@media (max-width: 400px) {
+  #menu-tile, #specials-tile {
+    width: 95%;
+    margin: 0 auto 20px;
   }
 }
